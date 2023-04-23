@@ -28,15 +28,15 @@ app.post('/',async(req,res)=>{
     res.send(`Hi ${valu.name}, your data save`)
 });
 
-app.get('/see',async(req,res)=>{
+app.get('/',async(req,res)=>{
     const seeuser = await monmodel.find();
     res.send(seeuser);
 })
 
 
-app.get('/',(req,res)=>{
-res.send('Hello');
-});
+// app.get('/',(req,res)=>{
+// res.send('Hello');
+// });
 app.listen(PORT,()=>{
     console.log('Server is Running');
 });
